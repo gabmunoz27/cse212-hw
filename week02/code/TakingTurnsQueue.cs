@@ -42,7 +42,7 @@ public class TakingTurnsQueue
             Person person = _people.Dequeue();
             if (person.Turns <= 0)
             {
-                // Infinite turns: always re-add without changing the turns value
+                // Infinite turns: re-add, keep turns the same
                 _people.Enqueue(person);
             }
             else if (person.Turns > 1)

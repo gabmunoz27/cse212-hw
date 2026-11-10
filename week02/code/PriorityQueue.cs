@@ -26,7 +26,7 @@
         var highPriorityIndex = 0;
         for (int index = 1; index < _queue.Count; index++)
         {
-            // Use > (not >=) so ties keep the item closest to the front (FIFO)
+            // Use > so ties keep the front item
             if (_queue[index].Priority > _queue[highPriorityIndex].Priority)
                 highPriorityIndex = index;
         }
